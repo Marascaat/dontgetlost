@@ -12,9 +12,11 @@ public class gameGod : MonoBehaviour
     public GameObject b2;
     public GameObject b3;
 
+    public GameObject spike;
+
     public int ballQ;
 
-    public int initialDiff;
+    public int initialDiff = 0;
     public int diff;
 
     List<Vector2> takenPos = new List<Vector2>();
@@ -49,6 +51,9 @@ public class gameGod : MonoBehaviour
 
         Instantiate(b3, genPos(), Quaternion.identity);
 
+        for (int i = 0; i < 2*diff; i++) {
+            Instantiate(spike, genPos(), Quaternion.identity);
+        }
     }
 
     Vector2 genPos()
