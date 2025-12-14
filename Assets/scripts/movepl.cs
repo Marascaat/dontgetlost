@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class movepl : MonoBehaviour
 {
+    public AudioClip pew;
+    public AudioSource src;
     public Transform plt;
     public float force;
     public Rigidbody2D rb;
@@ -19,6 +21,7 @@ public class movepl : MonoBehaviour
         mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButtonDown(0))
         {
+            src.PlayOneShot(pew, 0.5f);
             Shoot();
         }
         checkBounds();

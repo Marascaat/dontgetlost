@@ -3,6 +3,8 @@ using UnityEngine;
 public class ballCollision : MonoBehaviour
 {
     public gameGod gg;
+    public AudioClip pop;
+    public AudioSource src;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,6 +26,7 @@ public class ballCollision : MonoBehaviour
             {
                 Destroy(other.gameObject);
                 gg.ballQ += 1;
+                src.PlayOneShot(pop, 0.8f);
             }
         }
         if (other.gameObject.CompareTag("b2"))
@@ -32,6 +35,7 @@ public class ballCollision : MonoBehaviour
             {
                 Destroy(other.gameObject);
                 gg.ballQ += 1;
+                src.PlayOneShot(pop, 0.8f);
             }
         }
         if (other.gameObject.CompareTag("b3"))
@@ -40,6 +44,7 @@ public class ballCollision : MonoBehaviour
             {
                 Destroy(other.gameObject);
                 gg.ballQ += 1;
+                src.PlayOneShot(pop, 0.8f);
             }
         }
     }

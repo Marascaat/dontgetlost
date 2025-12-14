@@ -51,7 +51,7 @@ public class gameGod : MonoBehaviour
 
         Instantiate(b3, genPos(), Quaternion.identity);
 
-        for (int i = 0; i < 2*diff; i++) {
+        for (int i = 0; i < 1.5*diff; i++) {
             Instantiate(spike, genPos(), Quaternion.identity);
         }
     }
