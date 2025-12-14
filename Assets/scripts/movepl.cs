@@ -25,6 +25,7 @@ public class movepl : MonoBehaviour
     }
     void FixedUpdate()
     {
+        //orient the player with mouse
         Vector2 lookDir = mousePos - rb.position;
         float angle  = Mathf.Atan2(lookDir.y, lookDir.x)*Mathf.Rad2Deg+180;
         rb.rotation = angle;
@@ -34,11 +35,9 @@ public class movepl : MonoBehaviour
     {
         rb.AddForce(plt.right * force, ForceMode2D.Impulse);
     }
-
+    //ensure the player stays inside the screen
     void checkBounds()
     {
-        //Debug.Log(camera.WorldToScreenPoint(plt.position));
-        //Debug.Log("Screen Width : " + Screen.width);
         if (camera.WorldToScreenPoint(plt.position).x>Screen.width)
         {
             if (rb.linearVelocity.x>0)

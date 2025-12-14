@@ -132,10 +132,9 @@ GameObject:
   - component: {fileID: 226322680}
   - component: {fileID: 226322679}
   - component: {fileID: 226322681}
-  - component: {fileID: 226322682}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   plt: {fileID: 226322677}
-  force: 20
+  force: 15
   rb: {fileID: 226322679}
   camera: {fileID: 519420031}
 --- !u!61 &226322681
@@ -303,19 +302,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 20.026615, y: 10.135207}
   m_EdgeRadius: 0
---- !u!114 &226322682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226322675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2239937dd3b58664cbdb335564c03d21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ballCollision
-  gg: {fileID: 980786609}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,14 +625,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1a72e5394c302d409cdc508d610b5dc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::gameGod
-  rb: {fileID: 226322679}
-  tt: {fileID: 226322677}
+  m_EditorClassIdentifier: '::'
   camera: {fileID: 519420031}
   b1: {fileID: 1497682374995652608, guid: 56fbbfd9fe101ad4ba7887384f463cd5, type: 3}
   b2: {fileID: 2459272125748839506, guid: c521dda74df5adc4ca595067323a48ae, type: 3}
   b3: {fileID: 1845034513720674889, guid: a28468b995fcb614386d803fbeecde14, type: 3}
-  ballQ: 0
   initialDiff: 0
   diff: 0
 --- !u!1 &1379026772
