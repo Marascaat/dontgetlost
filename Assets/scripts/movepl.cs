@@ -3,7 +3,10 @@ using UnityEngine;
 public class movepl : MonoBehaviour
 {
     public AudioClip pew;
+    public AudioClip bnc;
     public AudioSource src;
+    public AudioSource lhs;
+    public AudioSource rhs;
     public Transform plt;
     public float force;
     public Rigidbody2D rb;
@@ -46,6 +49,7 @@ public class movepl : MonoBehaviour
             if (rb.linearVelocity.x>0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x*-1, rb.linearVelocity.y);
+                rhs.PlayOneShot(bnc, 0.5f);
             }
         }
         if (camera.WorldToScreenPoint(plt.position).x <0)
@@ -53,6 +57,7 @@ public class movepl : MonoBehaviour
             if (rb.linearVelocity.x < 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x * -1, rb.linearVelocity.y);
+                lhs.PlayOneShot(bnc, 0.5f);
             }
         }
 
@@ -61,6 +66,7 @@ public class movepl : MonoBehaviour
             if (rb.linearVelocity.y > 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * -1);
+                src.PlayOneShot(bnc, 0.5f);
             }
         }
         if (camera.WorldToScreenPoint(plt.position).y < 0)
@@ -68,6 +74,7 @@ public class movepl : MonoBehaviour
             if (rb.linearVelocity.y < 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * -1);
+                src.PlayOneShot(bnc, 0.5f);
             }
         }
     }

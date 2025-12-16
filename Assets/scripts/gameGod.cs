@@ -18,6 +18,7 @@ public class gameGod : MonoBehaviour
 
     public int initialDiff = 0;
     public int diff;
+    [SerializeField] float diffMultiplier;
 
     List<Vector2> takenPos = new List<Vector2>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -51,7 +52,7 @@ public class gameGod : MonoBehaviour
 
         Instantiate(b3, genPos(), Quaternion.identity);
 
-        for (int i = 0; i < 1.5*diff; i++) {
+        for (int i = 0; i < diffMultiplier*diff; i++) {
             Instantiate(spike, genPos(), Quaternion.identity);
         }
     }
